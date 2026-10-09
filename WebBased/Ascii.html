@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ASCII </title>
+</head>
+<body>
+    <h1> Enter a Number </h1>
+    <input type="text" id = 101 />    
+</body>
+
+<script>
+    const input = Document.getElementbyId(101);
+    let n = input.length();
+    let res = 0;
+    for(let i = 0 ; i < n ; i++){
+        res += ((input.charCodeAt(i) * 1) % 5);
+    }
+
+    alert(res);
+
+    </script>
+</html>
