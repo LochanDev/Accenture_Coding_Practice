@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding-top: 10px; }
+    button { padding: 6px 12px; margin: 4px; cursor: pointer; }
+    #count { font-weight: bold; font-size: 1.2rem; }
+    #status-msg { color: red; font-size: 0.85rem; margin-top: 5px; }
+  </style>
+</head>
+<body>
+  <div>Count: <span id="count">0</span></div>
+  <button id="inc-btn">Increment (+)</button>
+  <button id="dec-btn">Decrement (-)</button>
+  <p id="status-msg"></p>
+
+  <script>
+    let count = 0;
+    const countEl = document.getElementById('count');
+    const msgEl = document.getElementById('status-msg');
+
+    document.getElementById('inc-btn').addEventListener('click', () => {
+      // TODO: Increment count (Max limit: 10) and update UI/status
+      if(count < 10){
+      count++;
+      }
+      else{
+      count = 10;
+      msgEl.innerText = 'Max limit : 10';
+      }
+      countEl.textContent = count;
+    });
+
+    document.getElementById('dec-btn').addEventListener('click', () => {
+      // TODO: Decrement count (Min limit: 0) and update UI/status
+      if(count > 0){
+      count--;
+      }
+      else{
+      count = 0;
+      msgEl.innerText = 'Min limit: 0';
+      }
+      countEl.textContent = count;
+    });
+  </script>
+</body>
+</html>
