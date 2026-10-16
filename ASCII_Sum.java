@@ -29,9 +29,7 @@ public class ASCII_Sum{
             res.add(mp.get(el));
         }
         System.out.println(res);
-        // for(int el : l1){
-        //     System.out.println(el);
-        // }
+       
     }
     public static void main(String[] args) {
         List<String> arr = new ArrayList<>(Arrays.asList("apple","bat","cat","dog"));

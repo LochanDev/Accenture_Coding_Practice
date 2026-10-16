@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Button Doc</title>
+</head>
+<body>
+    <button>Lochan</button>
+     <button>Mike</button>
+      <button>Satya</button>
+
+      <h1 id="message"></h1>
+</body>
+<script>
+        const message = document.querySelector("h1");
+       const buttonList = document.querySelectorAll("button");
+    //    for(let i = 0 ; i < buttonList.length ; i++){
+    //    buttonList[i].addEventListener("click",()=>{
+    //         message.textContent= buttonList[i].textContent
+    //    })
+    // }
+    buttonList.forEach(button => {
+        button.addEventListener("click",()=>{
+            message.textContent = button.textContent
+        })
+    })
+
+</script>
+</html>
