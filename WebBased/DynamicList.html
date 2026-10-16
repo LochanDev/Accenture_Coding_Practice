@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="ItemInput"/>
+    <button id="addBtn">ADD</button>
+
+    <ul id="itemList">
+
+    </ul>
+</body>
+<script>
+    const input = document.getElementById("ItemInput");
+    const addBtn = document.getElementById("addBtn");
+    const List = document.getElementById("itemList");
+
+    addBtn.addEventListener("click",()=>{
+        const val = input.value;
+        if(val === ""){
+            return;
+        }
+            const li = document.createElement("li");
+            li.textContent = val;
+            List.appendChild(li);
+            input.value="";
+        
+    });
+</script>
+</html>
