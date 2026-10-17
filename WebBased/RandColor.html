@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">Hello</h1>
+    <button id="btn">change Color</button>
+</body>
+<script>
+    const el = document.getElementById("h1");
+    const btn = document.getElementById("btn");
+    const fun=()=>{
+        const num = "0123456789ABCDEF";
+        let color = "#";
+        for(let i = 0 ; i < 6 ; i++){
+        const idx = Math.floor(Math.random() * 100) % 16;
+        color += num[idx];
+        }
+        return color;
+    };
+    btn.addEventListener("click",()=>{
+        el.style.color = fun();
+    });
+    
+</script>
+</html>
